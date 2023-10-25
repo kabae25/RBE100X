@@ -20,4 +20,16 @@ def adder(a, b): #def - defines function, adder(arguements in here) is the name 
 a = 1
 b = 2
 c = adder(a, b)
-print(c)
+print("Outside",c)
+
+
+# Functions don't have tp have arguments or return a value
+def display():
+    c = "output"
+    print("Inside:", c) #this inside variable c is isolated with respect to other values in the script
+
+x = display() # variable set to a function doesn't return anything
+print(x) # returns a none type
+
+# In general *, things inside the unction cannot affect things outisde of the function
+print("Outside:", c)
