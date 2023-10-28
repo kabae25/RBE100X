@@ -1,50 +1,40 @@
-# Escape sequences. These are special characters in a string that your computer interprets as a command
-# \n - this is an ascii linebreak
-# \\ - this is a back slash
-# \" - this is a quote
+#objects and examples
+import numpy as np #numpy is the numerical python toolbox
+import time
+# Python always imports the library as an object. 
+# Appending "as" after the library lets you rename it by following "as" with a alias.
 
-print("it does not matt\ner where it is in the text")
-print("If we want a quote we use \\ \"")
-
-# Concatination is when we combine two strings
-# Note: the + operator does not insert a space
-x = "We can combine " + "and slice strings"
+x = np.sin(20)
 print(x)
 
-# strings are a list of characters, hence the name string, we can index and slice a string by:
-# [] - index notation
-# Slicing is when we get only part of the string. ":" indicates the slice
-# It starts with the first number and ends one before the second number (this print command starts at 4 and actually ends at 9)
-print(x[4:10])
 
-# Multiplying a strin will make it repeat
-print(3 * x, "\n")
+print(time.time())
 
-# Collection data types
-# Lists
-# How do we organize our data
-# in python, lists can contain any data type, including other lists
-list_1 = [0, 'string', [2, 3]]
-print("Our list: ", list_1)
+st = time.time()
+time.sleep(1)
 
-# We can access an element by using index
-# Note that indicates start at element 0
-print("At index 2:", list_1[2])
+time_lapsed = time.time() - st
+print(time_lapsed)
 
-# If we want to reach elements in a sublist, we can keep adding indices
-print("Element from sublist:", list_1[2][1])
+# when a function is attached to a object, it is called a method
+list_0 = [1, 'string', 5, 5, 5, 6]
 
-# Indices are assigned left to right. Using negative numbers, we can access it from right to left
-# It starts at -1
-print("At index -2:", list_1[-2])
+# append() lets us add an element to the end of a string
+# ctrl + slash lets you comment/uncomment selected lines
+list_0.append(52)
+print("Appended list:", list_0)
 
-#We can also slice, starting at the first number and ending one before the last
-print("Sliced from [1:2]:", list_1[1:2])
+# pop() removes the element specified. By default removes the last element
+list_0.pop(0)
+print("Popped List:", list_0)
 
-# Finally, we can overwrite specific elements by using the index
-list_1[2] = 29
-print("Over wrote the thrid element", list_1)
+# Count tells ys how many times an alement appears in the list
+number = list_0.count(5) 
+print("Number of times 5 is in the list", number)
 
-# We can also combine lists by usign a + sign
-list_2 = list_1 + [29, 30, 'cheese']
-print("Combined list:", list_2)
+# clear empties the list 
+list_0.clear()
+print("Cleared list:", list_0)
+
+# "__" before and after means not to use that function
+
