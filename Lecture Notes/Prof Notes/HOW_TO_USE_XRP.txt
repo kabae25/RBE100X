@@ -1,0 +1,38 @@
+Install: 
+vscode
+nodejs.org/en <---- this is the big missing one bleh 
+
+Extensions: 
+python 
+pymakr
+
+We need to run xrp in the online IDE to initialize the board 
+
+How to run scripts: 
+
+1) When we plug in the device we should see it appear under "DEVICES" in the "PyMaker" tab
+2) Click the lightning bolt by its name to connect the device
+3) We have to make a new project ("Projects" under "PyMaker")
+	a) It will ask you to select a template. Click the option for the board and it will download 
+		all of the board files into your folder
+	b) If we have not connected the board yet, we can simply click download by the device name after the project is made
+	c) If you see neither option, try rightclicking on the board and hitting stop script 
+4) We need to link the project to the board under "Projects" 
+5) Now we can click create a terminal to allow us to print things from the XRP
+6) To put a specific code on the board, we need to include its filename in "main.py"
+7) When ready we can click upload by the device name
+8) We then need to right click on the device and select hard reset (you can also just press reset on the board)
+9) Finally we have to reconnect to see the terminal output (Note: If it tries to print before you reconnect, you simply won't see it)
+
+* Note: by the project folder name, we can select developer mode.
+By default, all files on the board are deleted and the entire project folder is reuploaded. 
+In dev mode, it will only update necessary files. 
+Saving the file will automatically upload it to the board and will run the script. (so no steps 6-8)
+
+** Note: in VScode we can move the tabs around by dragging and dropping
+	i.e. in the explore tab, we can drag and drop "projects" and "devices" so we can see them with the files
+
+*** Note: if there are yellow squiggles under XRPLib imports add lib (lib.XRPLib) to check another folder down
+
+
+https://github.com/pycom/pymakr-vsc/blob/next/GET_STARTED.md
